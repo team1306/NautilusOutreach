@@ -2,6 +2,12 @@ package org.usfirst.frc.team1306.robot.commands.intake;
 
 import org.usfirst.frc.team1306.robot.commands.CommandBase;
 
+/**
+ * This command spins the intake motors and takes in the ball when pressed and 
+ * stopped when pressed again.
+ *
+ */
+
 public class IntakeBall extends CommandBase {
 
 	public IntakeBall() {

@@ -4,6 +4,12 @@ import org.usfirst.frc.team1306.robot.Constants;
 import org.usfirst.frc.team1306.robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.Timer;
 
+/**
+ * This command spits out the ball from the intake on a set timer and the motors stop
+ * after it is done running
+ *
+ */
+
 public class SpitBall extends CommandBase {
 
 	Timer timer;
