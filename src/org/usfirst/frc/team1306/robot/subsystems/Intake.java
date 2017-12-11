@@ -5,32 +5,36 @@ import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
- * This Subsystem controls only the rollers on the intake arm, not the intake
- * arm itself. It has methods for bringing balls in and out of the robot.
+ * @Intake
+ * 
+ * Subsystem that controls our intake mechanism which we use to take in and spit out boulders,
+ * from the robot. All methods in this subsystem are used to accomplish those tasks.
+ * 
+ * @author Ethan Dong and Jackson Goth
  */
 public class Intake extends Subsystem {
 
-	Talon frontMotor;
-	Talon backMotor;
+	private Talon intakeMotor; //Front motor spinning mechanums
+	private Talon indexerMotor; //Back motor spinning indexer wheels
 	
 	public Intake() {
-		frontMotor = new Talon(RobotMap.INTAKE_ROLLER_1_PORT);
-		backMotor = new Talon(RobotMap.INTAKE_ROLLER_2_PORT);
+		intakeMotor = new Talon(RobotMap.INTAKE_TALON_PORT);
+		indexerMotor = new Talon(RobotMap.INDEXER_TALON_PORT);
 	}
 
 	public void spinInward() {
-		frontMotor.set(0.5);
-		backMotor.set(-0.5);
+		intakeMotor.set(0.5);
+		indexerMotor.set(-0.5);
 	}
 	
 	public void spinOutward() {
-		frontMotor.set(-0.5);
-		backMotor.set(0.5);
+		intakeMotor.set(-0.5);
+		indexerMotor.set(0.5);
 	}
 	
 	public void stop() {
-		frontMotor.set(0);
-		backMotor.set(0);
+		intakeMotor.set(0);
+		indexerMotor.set(0);
 		
 	}
 	

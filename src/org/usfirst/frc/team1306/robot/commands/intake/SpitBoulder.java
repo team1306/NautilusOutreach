@@ -4,11 +4,18 @@ import org.usfirst.frc.team1306.robot.Constants;
 import org.usfirst.frc.team1306.robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.Timer;
 
-public class SpitBall extends CommandBase {
+/**
+ * @SpitBoulder
+ * 
+ * Command that uses the indexer / intake motors to push out a boulder, using a timer to judge if the ball has exited.
+ * 
+ * @author Ethan Dong and Jackson Goth
+ */
+public class SpitBoulder extends CommandBase {
 
-	Timer timer;
+	private Timer timer;
 	
-	public SpitBall() {
+	public SpitBoulder() {
 		requires(intake);
 		
 		timer = new Timer();

@@ -2,9 +2,16 @@ package org.usfirst.frc.team1306.robot.commands.intake;
 
 import org.usfirst.frc.team1306.robot.commands.CommandBase;
 
-public class IntakeBall extends CommandBase {
+/**
+ * @IntakeBoulder
+ * 
+ * Command that is toggled on and off and spins the intake / indexer motors inward to take in a boulder
+ * 
+ * @author Ethan Dong and Jackson Goth
+ */
+public class IntakeBoulder extends CommandBase {
 
-	public IntakeBall() {
+	public IntakeBoulder() {
 		requires(intake);
 	}
 

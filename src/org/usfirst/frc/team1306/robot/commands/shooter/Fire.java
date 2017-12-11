@@ -56,11 +56,7 @@ public class Fire extends CommandBase {
 	@Override
 	protected void execute() {
 
-		if (SmartDashboard.getBoolean("momentum shot",true) && !indexer.hasBall()) {
-			shooter.spinDown();
-		} else {
-			shooter.spinUp();
-		}
+		shooter.spinUp();
 
 		indexer.driveMotor();
 
