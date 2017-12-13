@@ -7,7 +7,6 @@ package org.usfirst.frc.team1306.robot;
  * 
  * @author Jackson Goth
  */
-
 public class Constants {
 
 	/** @New_Constants */
@@ -92,10 +91,5 @@ public class Constants {
 	public final static double WALL_TIME = 2.7;
 	public final static double TARGET_TIME = 5.0;
 	public final static double SLOW_DRIVE = 0.3;
-	/*
-	 * ramparts: 2.7
-	 * 
-	 * 
-	 */
 
 }
