@@ -9,6 +9,7 @@ import org.usfirst.frc.team1306.robot.subsystems.Hood;
 import org.usfirst.frc.team1306.robot.subsystems.Indexer;
 import org.usfirst.frc.team1306.robot.subsystems.Intake;
 import org.usfirst.frc.team1306.robot.subsystems.Shooter;
+import org.usfirst.frc.team1306.robot.subsystems.Shooter2;
 import org.usfirst.frc.team1306.robot.subsystems.Turret;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.command.Command;
@@ -29,6 +30,7 @@ public abstract class CommandBase extends Command {
 	protected static OI oi;
 	protected static Drivetrain drivetrain;
 	protected static Shooter shooter;
+	protected static Shooter2 shooter2;
 	protected static Turret turret;
 	protected static Indexer indexer;
 	protected static Intake intake;
@@ -47,6 +49,7 @@ public abstract class CommandBase extends Command {
 		drivetrain = new Drivetrain(driveConfig);
 		
 		shooter = new Shooter();
+		shooter2 = new Shooter2();
 		turret = new Turret();
 		indexer = new Indexer();
 		intake = new Intake();

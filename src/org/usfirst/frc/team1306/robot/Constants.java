@@ -46,6 +46,7 @@ public class Constants {
 	public final static double SHOOTER_SET_SPEED = 7500;
 	public final static double SHOOTER_LOW_SPIN = 3000;
 	public final static double SHOT_TIME = 2.0;
+	public final static double SHOOT_TIME = 3.0;
 	// hood constants
 	public final static double HOOD_0_POS = -70.0;
 	public final static double HOOD_90_POS = 650.0;
