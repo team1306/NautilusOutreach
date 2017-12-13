@@ -24,7 +24,7 @@ public class Shooter2 extends Subsystem{
 		
 		public void shootOut() {
 			frontMotor.changeControlMode(TalonControlMode.Speed);
-			frontMotor.set(0.5 * Constants.SHOOTER_CONVERSION_FACTOR);
+			frontMotor.set(2000);
 	
 		}
 		

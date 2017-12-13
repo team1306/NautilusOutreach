@@ -2,10 +2,11 @@ package org.usfirst.frc.team1306.robot;
 
 import org.usfirst.frc.team1306.robot.commands.intake.IntakeBoulder;
 import org.usfirst.frc.team1306.robot.commands.intake.SpitBoulder;
-import org.usfirst.frc.team1306.robot.commands.shooter.Fire;
+import org.usfirst.frc.team1306.robot.commands.shooter.Fire2;
 import org.usfirst.frc.team1306.robot.triggers.ControllerButton;
 import org.usfirst.frc.team1306.robot.triggers.DPadDirection;
 import org.usfirst.frc.team1306.robot.triggers.DPadPress;
+
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -61,7 +62,7 @@ public class OI {
 		DPadPress secondaryDPadDown = new DPadPress(secondaryController, DPadDirection.DOWN);
 
 		// Bind input devices to commands
-		pbuttonA.whenPressed(new Fire());
+		pbuttonA.whenPressed(new Fire2());
 		
 		pbuttonY.toggleWhenPressed(new IntakeBoulder());
 		pbuttonX.whenPressed(new SpitBoulder());

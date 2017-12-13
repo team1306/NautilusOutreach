@@ -37,10 +37,7 @@ public class Fire2 extends CommandBase{
 		return false;
 	}
 	
-	@Override
-	protected void interrupted() {
-		end(); //Needs to end if un-toggled
-	}
+
 }
 
 
