@@ -26,9 +26,7 @@ public class OI {
 	private static XboxController primaryController = null;
 	private static XboxController secondaryController = null;
 	
-	/**
-	 * Initialized controllers + buttons, and binds commands to them
-	 */
+	/** Initialized controllers + buttons, and binds commands to them */
 	public OI() {
 		//Declare ports of xbox controllers
 		primaryController = new XboxController(RobotMap.PRIMARY_PORT);
@@ -77,9 +75,7 @@ public class OI {
 	
 	public enum Side {L,R}; //Side (left or right) (for rumble)
 	
-	/**
-	 * Returns the joystick value (from -1.0 to 1.0) for a specified controller's joystick's axis (uses deadband)
-	 */
+	/** Returns the joystick value (from -1.0 to 1.0) for a specified controller's joystick's axis (uses deadband) */
 	public static double getJoyVal(Controller c, Joystick j, Axis a) {
 		
 		XboxController controller;
@@ -97,9 +93,7 @@ public class OI {
 		}
 	}
 	
-	/**
-	 * Returns the value of the specified trigger (from 0.0 to 1.0)
-	 */
+	/** Returns the value of the specified trigger (from 0.0 to 1.0) */
 	public static double getTriggerVal(Controller c, Trigger t) {
 		
 		XboxController controller;
@@ -113,9 +107,7 @@ public class OI {
 		}
 	}
 	
-	/**.
-	 * Returns the value of a specified button on a specified controller
-	 */
+	/**.Returns the value of a specified button on a specified controller */
 	public static boolean getButtonStatus(Controller c, ControllerButton b) {
 		
 		XboxController controller;
@@ -125,9 +117,7 @@ public class OI {
 		return controller.getRawButton(b.value);
 	}
 	
-	/**
-	 * Sets the rumble of a specified controller to a specified amount of rumble
-	 */
+	/** Sets the rumble of a specified controller to a specified amount of rumble */
 	public static void setRumble(Controller c, Side s, double rumbleness) {
 		
 		XboxController controller;
@@ -141,9 +131,7 @@ public class OI {
 		}
 	}
 	
-	/**
-	 * Resets the rumble on the specified side of a specified controller
-	 */
+	/** Resets the rumble on the specified side of a specified controller */
 	public static void resetRumble(Controller c, Side s) {
 		
 		XboxController controller;

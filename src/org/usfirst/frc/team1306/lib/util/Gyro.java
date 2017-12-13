@@ -7,11 +7,12 @@ import edu.wpi.first.wpilibj.SPI;
  * @Gyro
  * 
  * This class holds the gyro object and is meant make accessing data from the navx easier and more organized.
+ * 
  * @author Jackson Goth
  */
 public class Gyro {
 
-	private AHRS navx; //Gyro we use, navX Sensor
+	private AHRS navx; //Gyro we use, the NavX Sensor
 	
 	public Gyro() {
 		try {
@@ -19,28 +20,20 @@ public class Gyro {
 			
 			navx.reset(); //Resets Yaw
 			navx.resetDisplacement(); //Resets displacement
-		} catch(RuntimeException ex) {
-			
-		}
+		} catch(RuntimeException ex) { }
 	}
 	
-	/**
-	 * Returns total accumulated yaw value in degrees
-	 */
+	/** Returns total accumulated yaw value in degrees */
 	public double getAngle() {
 		return navx.getAngle();
 	}
 	
-	/**
-	 * Returns current yaw value (-180 to 180 degrees only)
-	 */
+	/** Returns current yaw value (-180 to 180 degrees only) */
 	public double getYaw() {
 		return navx.getYaw();
 	}
 	
-	/**
-	 * Returns displacement from navx along a given axis
-	 */
+	/** Returns displacement from navx along a given axis */
 	public double getDisplacement(Axis axis) {
 		if(axis.equals(Axis.X)) {
 			return navx.getDisplacementX();

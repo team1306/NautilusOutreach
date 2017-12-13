@@ -17,7 +17,7 @@ import com.ctre.CANTalon.TalonControlMode;
  */
 public class DriveSide {
 
-	public CANTalon master; //Talon that is adjusted, and from which other talons imitate
+	private CANTalon master; //Talon that is adjusted, and from which other talons imitate
 	
 	/**
 	 * Makes a new DriveSide with a given array filled with the side's corresponding talons
@@ -43,23 +43,17 @@ public class DriveSide {
 		}
 	}
 	
-	/**
-	 * Changes the control mode of the master talon
-	 */
+	/** Changes the control mode of the master talon */
 	public void changeControlMode(TalonControlMode mode) {
 		master.changeControlMode(mode);
 	}
 	
-	/**
-	 * Set's the output of the talons to a given speed
-	 */
+	/** Set's the output of the talons to a given speed */
 	public void set(double speed) {
 		master.set(speed);
 	}
 
-	/**
-	 * Initializes the drive encoders (Currently set-up to initialize Grayhill encoders)
-	 */
+	/** Initializes the drive encoders (Currently set-up to initialize Grayhill encoders) */
 	public void initEncoders() {
 		
 		master.setFeedbackDevice(FeedbackDevice.QuadEncoder);
@@ -70,9 +64,7 @@ public class DriveSide {
 		master.setEncPosition(0);
 	}
 	
-	/**
-	 * Sets up the PIDF control values
-	 */
+	/** Sets up the PIDF control values */
 	public void setPIDParams(PIDParameters params) {
 		master.setF(params.f);
 		master.setP(params.p);
@@ -80,45 +72,33 @@ public class DriveSide {
 		master.setD(params.d);
 	}
 	
-	/**
-	 * Sets up the Motion Magic control values
-	 */
+	/** Sets up the Motion Magic control values */
 	public void setMotionMagicParams(double cruiseVelocity, double acceleration) {
 		master.setMotionMagicCruiseVelocity(cruiseVelocity);
 		master.setMotionMagicAcceleration(acceleration);
 	}
 	
-	/**
-	 * Reverses motor output from the loop output, (ex. if true a loop output of 1 would turn the motor at -1)
-	 */
+	/** Reverses motor output from the loop output, (ex. if true a loop output of 1 would turn the motor at -1) */
 	public void flipLoopOutput(boolean flipped) {
 		master.reverseOutput(flipped);
 	}
 	
-	/**
-	 * Reverses encoder output (ex. if true an encoder output of 200 would read -200)
-	 */
+	/** Reverses encoder output (ex. if true an encoder output of 200 would read -200) */
 	public void flipEncoderOutput(boolean flipped) {
 		master.reverseSensor(flipped);
 	}
 	
-	/**
-	 * Returns the current position from the encoder
-	 */
+	/** Returns the current position from the encoder */
 	public double getEncPos() {
 		return master.getEncPosition();
 	}
 	
-	/**
-	 * Sets the encoder position to a given position (Generally used to reset the encoder output)
-	 */
+	/** Sets the encoder position to a given position (Generally used to reset the encoder output) */
 	public void setEncPos(int pos) {
 		master.setEncPosition(pos);
 	}
 	
-	/**
-	 * Returns the current velocity from the encoder
-	 */
+	/** Returns the current velocity from the encoder */
 	public double getEncVel() {
 		return master.getEncVelocity();
 	}
