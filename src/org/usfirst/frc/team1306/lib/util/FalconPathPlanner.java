@@ -611,7 +611,7 @@ public class FalconPathPlanner
 	 * @param robotTrackWidth - distance between left and right side wheels of a skid steer chassis. Known as the track width.
 	 */
 	//public void calculate(double totalTime, double timeStep, double robotTrackWidth)
-	public void calculate(ProfileParams params)
+	public void calculate(PathParams params)
 	{
 		/**
 		 * pseudo code

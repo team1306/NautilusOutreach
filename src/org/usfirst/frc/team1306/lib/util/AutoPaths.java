@@ -1,5 +1,12 @@
 package org.usfirst.frc.team1306.lib.util;
 
+/**
+ * @AutoPaths
+ * 
+ * This is a place to
+ * 
+ * @author Jackson Goth
+ */
 public class AutoPaths {
 	
 	/** Example Path */

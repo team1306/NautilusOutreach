@@ -1,6 +1,6 @@
 package org.usfirst.frc.team1306.robot.commands.shooter;
 
-
+import org.usfirst.frc.team1306.robot.Constants;
 import org.usfirst.frc.team1306.robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.Timer;
 
@@ -25,13 +25,13 @@ public class Fire2 extends CommandBase{
 
 	@Override
 	protected void execute() {
-		Shooter.shootOut();
+		shooter2.shootOut();
 	}
 
 	@Override
 	protected boolean isFinished() {
 		if (timer.hasPeriodPassed(Constants.SHOOT_TIME)){
-			Shooter.stop
+			shooter2.stop();
 			return true;
 		}
 		return false;
