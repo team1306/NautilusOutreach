@@ -22,9 +22,9 @@ public class Shooter2 extends Subsystem{
 			
 		}
 		
-		public void shootOut() {
+		public void shootOut(double frontMotorSpeed) {
 			frontMotor.changeControlMode(TalonControlMode.Speed);
-			frontMotor.set(2000);
+			frontMotor.set(frontMotorSpeed);
 	
 		}
 		
