@@ -14,7 +14,7 @@ public class Shooter2 extends Subsystem{
 		CANTalon frontMotor;
 		
 		public Shooter2() {
-			frontMotor = new CANTalon(RobotMap.TURRET_TALON_PORT);
+			frontMotor = new CANTalon(RobotMap.FLYWHEEL_TALON_PORT);
 			frontMotor.enable();
 			frontMotor.reverseSensor(true);
 			frontMotor.reverseOutput(true);
