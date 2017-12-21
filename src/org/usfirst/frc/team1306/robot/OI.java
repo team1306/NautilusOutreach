@@ -1,5 +1,6 @@
 package org.usfirst.frc.team1306.robot;
 
+import org.usfirst.frc.team1306.robot.commands.drivetrain.DriveForward;
 import org.usfirst.frc.team1306.robot.commands.intake.IntakeBoulder;
 import org.usfirst.frc.team1306.robot.commands.intake.SpitBoulder;
 import org.usfirst.frc.team1306.robot.commands.shooter.Fire2;
@@ -39,7 +40,7 @@ public class OI {
 		Button pbuttonX = new JoystickButton(primaryController, ControllerButton.X.value);
 		Button pbuttonY = new JoystickButton(primaryController, ControllerButton.Y.value);
 //		Button pbuttonRB = new JoystickButton(primaryController, ControllerButton.RB.value);
-//		Button pbuttonLB = new JoystickButton(primaryController, ControllerButton.LB.value); 
+		Button pbuttonLB = new JoystickButton(primaryController, ControllerButton.LB.value); 
 		Button pbuttonStart = new JoystickButton(primaryController, ControllerButton.START.value);
 		Button pbuttonBack = new JoystickButton(primaryController, ControllerButton.BACK.value);
 		DPadPress primaryDPadUp = new DPadPress(primaryController, DPadDirection.UP);
@@ -66,6 +67,7 @@ public class OI {
 		
 		pbuttonY.toggleWhenPressed(new IntakeBoulder());
 		pbuttonX.whenPressed(new SpitBoulder());
+		pbuttonLB.whenPressed(new DriveForward());
 	}
 
 	public enum Controller {P,S}; //Controller (primary or secondary)

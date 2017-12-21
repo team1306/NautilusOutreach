@@ -5,6 +5,7 @@ import org.usfirst.frc.team1306.lib.util.Settings.TalonType;
 import org.usfirst.frc.team1306.robot.OI;
 import org.usfirst.frc.team1306.robot.RobotMap;
 import org.usfirst.frc.team1306.robot.subsystems.Drivetrain;
+import org.usfirst.frc.team1306.robot.subsystems.GearMech;
 import org.usfirst.frc.team1306.robot.subsystems.Hood;
 import org.usfirst.frc.team1306.robot.subsystems.Indexer;
 import org.usfirst.frc.team1306.robot.subsystems.Intake;
@@ -35,6 +36,7 @@ public abstract class CommandBase extends Command {
 	protected static Indexer indexer;
 	protected static Intake intake;
 	protected static Hood hood;
+	protected static GearMech gearmech;
 
 	public static void init() {
 		

@@ -18,6 +18,7 @@ public class RobotMap {
 	/** @Intake_Ports */
 	public static final int INTAKE_TALON_PORT = 0;
 	public static final int INDEXER_TALON_PORT = 2;
+	public static final int GEARTAKE_SPARK_PORT = 4;
 	
 	/** @Drivetrain_Ports */ //TODO Re-name each talon to specify 'front' or 'back' instead of '1,2,3,4'
 	public static final int LEFT_TALON_1_PORT = 1;
